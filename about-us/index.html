@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tietoa Meistä - MrPacho Casino | Parhaat Pelit ja Bonukset</title>
+    <meta name="description" content="Lue lisää MrPacho Casinon taustasta ja missiosta. Me tarjoamme huippuluokan pelejä, loistavat bonukset ja turvallisen pelikokemuksen kaikille pelaajille." />
+    <link rel="icon" type="image/x-icon" href="../favicon (2).ico" />
+    <style>
+      :root {
+        --page-bg: #161821;
+        --header-footer: #3f405b;
+        --login: #90aaf2;
+        --register: #6eca02;
+        --cta: #5fc500;
+        --text: #f4f6ff;
+        --card-bg: #222536;
+        --muted: #bac0de;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+        background: var(--page-bg);
+        color: var(--text);
+        line-height: 1.55;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .container {
+        width: min(1200px, 92%);
+        margin: 0 auto;
+      }
+
+      .site-header {
+        background: var(--header-footer);
+        position: sticky;
+        top: 0;
+        z-index: 20;
+      }
+
+      .header-wrap {
+        min-height: 82px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 10px 0;
+      }
+
+      .logo {
+        width: 190px;
+      }
+
+      .header-actions {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      .btn {
+        border: 0;
+        border-radius: 10px;
+        color: #0f1020;
+        font-weight: 700;
+        padding: 12px 18px;
+        cursor: pointer;
+      }
+
+      .btn-login {
+        background: var(--login);
+      }
+
+      .btn-register {
+        background: var(--register);
+      }
+
+      .hero {
+        padding: 52px 0 40px;
+        text-align: center;
+      }
+
+      h1,
+      h2,
+      h3 {
+        line-height: 1.2;
+      }
+
+      .hero h1 {
+        font-size: clamp(2rem, 4vw, 3.4rem);
+        margin: 0 0 22px;
+      }
+
+      .hero-intro {
+        max-width: 900px;
+        margin: 0 auto 24px;
+        color: var(--muted);
+      }
+
+      .hero-banner {
+        margin: 0 auto;
+        width: min(100%, 930px);
+        border-radius: 18px;
+        border: 2px solid #3d4264;
+      }
+
+      .cta {
+        display: inline-block;
+        margin-top: 24px;
+        background: var(--cta);
+        color: #0f1800;
+        font-size: 1.1rem;
+        font-weight: 800;
+        padding: 15px 34px;
+        border-radius: 999px;
+        animation: pulse 1.9s infinite;
+        box-shadow: 0 0 0 0 rgba(95, 197, 0, 0.7);
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+          box-shadow: 0 0 0 0 rgba(95, 197, 0, 0.7);
+        }
+        70% {
+          transform: scale(1.05);
+          box-shadow: 0 0 0 14px rgba(95, 197, 0, 0);
+        }
+        100% {
+          transform: scale(1);
+          box-shadow: 0 0 0 0 rgba(95, 197, 0, 0);
+        }
+      }
+
+      section {
+        padding: 34px 0;
+      }
+
+      .section-title {
+        font-size: clamp(1.5rem, 2.4vw, 2.2rem);
+        margin: 0 0 18px;
+      }
+
+      .games-grid {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .game-card {
+        background: var(--card-bg);
+        border-radius: 12px;
+        overflow: hidden;
+        border: 1px solid #363a56;
+        aspect-ratio: 1 / 1;
+      }
+
+      .game-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .seo-box {
+        background: #1d2030;
+        border: 1px solid #353954;
+        border-radius: 14px;
+        padding: 24px;
+      }
+
+      .seo-box p,
+      .seo-box li,
+      .seo-box td,
+      .seo-box th {
+        color: var(--muted);
+      }
+
+      .seo-box h3 {
+        margin-top: 24px;
+      }
+
+      .content-image {
+        width: min(100%, 960px);
+        border-radius: 14px;
+        border: 1px solid #404767;
+        margin: 16px auto;
+      }
+
+      .seo-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 15px;
+        overflow: hidden;
+      }
+
+      .seo-table th,
+      .seo-table td {
+        border: 1px solid #424763;
+        padding: 10px;
+        text-align: left;
+      }
+
+      .seo-table th {
+        color: #fff;
+        background: #2a2f45;
+      }
+
+      .payments-grid,
+      .trust-grid {
+        display: grid;
+        grid-template-columns: repeat(7, minmax(80px, 1fr));
+        gap: 10px;
+        align-items: center;
+      }
+
+      .payments-item,
+      .trust-item {
+        background: #1f2233;
+        border: 1px solid #353a58;
+        border-radius: 10px;
+        padding: 10px;
+        min-height: 74px;
+        display: grid;
+        place-items: center;
+      }
+
+      .payments-item img,
+      .trust-item img {
+        max-height: 40px;
+        width: auto;
+      }
+
+      .reviews {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .review-card {
+        background: #1f2234;
+        border: 1px solid #323754;
+        border-radius: 12px;
+        padding: 18px;
+      }
+
+      .review-author {
+        color: #c8d0f8;
+        font-weight: 700;
+        margin-top: 14px;
+      }
+
+      .faq details {
+        background: #1d2030;
+        border: 1px solid #353a58;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        padding: 12px 15px;
+      }
+
+      .faq summary {
+        cursor: pointer;
+        font-weight: 700;
+      }
+
+      .faq p {
+        color: var(--muted);
+        margin: 10px 0 0;
+      }
+
+      .updated {
+        padding: 12px 0 22px;
+        text-align: center;
+        color: #d7dcfa;
+      }
+
+      .site-footer {
+        background: var(--header-footer);
+        padding: 24px 0 18px;
+      }
+
+      .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 16px;
+      }
+
+      .footer-links a {
+        color: #e8ebff;
+        border-bottom: 1px solid transparent;
+      }
+
+      .footer-links a:hover {
+        border-color: #e8ebff;
+      }
+
+      .copyright {
+        margin-top: 18px;
+        color: #dce1ff;
+      }
+
+      @media (max-width: 980px) {
+        .games-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .payments-grid,
+        .trust-grid {
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 740px) {
+        .header-wrap {
+          flex-direction: column;
+          justify-content: center;
+        }
+
+        .reviews {
+          grid-template-columns: 1fr;
+        }
+
+        .games-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .payments-grid,
+        .trust-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+    </style>
+    <style>
+      .doc-content h1 {
+        margin-top: 0;
+        font-size: clamp(2rem, 3.8vw, 3rem);
+      }
+
+      .doc-content table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 16px;
+      }
+
+      .doc-content th,
+      .doc-content td {
+        border: 1px solid #424763;
+        padding: 10px;
+        text-align: left;
+        color: var(--muted);
+      }
+
+      .doc-content th {
+        color: #fff;
+        background: #2a2f45;
+      }
+
+      .doc-content a {
+        color: #b8caff;
+        text-decoration: underline;
+      }
+
+      .doc-content .faq-item {
+        background: #1f2234;
+        border: 1px solid #323754;
+        border-radius: 12px;
+        padding: 16px;
+        margin: 12px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-wrap">
+        <a href="../" aria-label="MrPacho Casino etusivu">
+          <img class="logo" src="../mrpacho logo.svg" alt="MrPacho Casino logo" />
+        </a>
+
+        <div class="header-actions">
+          <a class="btn btn-login" href="../login/">Kirjaudu sisään</a>
+          <a class="btn btn-register" href="#">Rekisteröidy</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <div class="container seo-box doc-content">
+    <h1>Tietoa Meistä</h1>
+    <p>Tervetuloa MrPacho Casinon "Tietoa Meistä" -sivulle! Me olemme intohimoisia kasinoharrastajia, ja tarkoituksemme on tarjota pelaajille unohtumaton ja turvallinen pelikokemus. MrPacho Casino on luotu ajatuksella tarjota pelaajille kaikki parhaat pelit, suuret voitot ja erinomaiset bonukset yhdessä paikassa. Olemme ylpeitä siitä, että pystymme tarjoamaan peliympäristön, joka on paitsi viihdyttävä, myös luotettava ja turvallinen. Tällä sivulla kerromme enemmän MrPacho Casinon tarinasta, arvoista ja siitä, miksi me olemme yksi parhaista kasinoista verkossa.</p>
+
+    <h2>Missiomme ja Visionamme</h2>
+    <p>Missiomme on yksinkertainen: haluamme tarjota pelaajille turvallisen ja hauskan paikan nauttia kasinopeleistä ja voitoista. Me MrPacho Casinolla uskomme, että pelaamisen tulisi olla viihdyttävää, jännittävää ja reilua. Meidän visionamme on olla markkinoiden johtava online-kasino, joka tarjoaa laajan pelivalikoiman ja jatkuvasti päivittyviä kampanjoita ja bonuksia, jotka tekevät pelaamisesta entistäkin palkitsevampaa.</p>
+    <p>Meidän tärkein tavoitteemme on luoda yhteisö, jossa pelaajat voivat nauttia pelaamisesta turvallisesti ja ilman huolia. Haluamme, että kaikki pelaajamme kokevat, että heidän aikansa MrPacho Casinolla on palkitsevaa ja että heillä on mahdollisuus voittaa suuria summia samalla kun he pitävät hauskaa. Panostamme myös vastuulliseen pelaamiseen ja tarjoamme työkaluja, joiden avulla pelaajat voivat hallita pelikäyttäytymistään.</p>
+
+    <h2>Pelivalikoimamme</h2>
+    <p>MrPacho Casino tarjoaa laajan valikoiman pelejä, jotka sopivat kaikille pelaajille. Olitpa sitten kolikkopelien ystävä, pöytäpelien tai live-kasinon harrastaja, meiltä löydät kaiken tarvittavan. Yhteistyössä alan johtavien pelintarjoajien kanssa, kuten NetEnt, Microgaming ja Evolution Gaming, tarjoamme huippuluokan pelejä, jotka takaavat jännitystä ja suuria voittomahdollisuuksia. Pelit ovat optimoitu niin, että ne toimivat sujuvasti kaikilla laitteilla, aina tietokoneista älypuhelimiin.</p>
+    <p>Pelivalikoimastamme löydät muun muassa:</p>
+    <ul>
+        <li><strong>Kolikkopelit:</strong> Upeasti suunniteltuja video- ja klassisia kolikkopelejä eri teemoilla ja ominaisuuksilla.</li>
+        <li><strong>Pöytäpelit:</strong> Perinteiset kasinopelit, kuten blackjack, ruletti ja baccarat.</li>
+        <li><strong>Live-kasino:</strong> Oikeiden jakajien kanssa pelattavat live-kasinopelit, joissa pääset nauttimaan aidosta kasinotunnelmasta reaaliajassa.</li>
+        <li><strong>Erikoispelit:</strong> Raaputusarvat, bingo ja muut hauskat erikoispelit.</li>
+    </ul>
+    <p>Me MrPacho Casinolla uskomme, että tarjonnan laajuus on avain jännittävään ja palkitsevaan pelikokemukseen. Siksi panostamme jatkuvasti uusien pelien ja tarjoajien lisäämiseen, jotta pelaajamme voivat nauttia aina uusimmista ja parhaista peleistä.</p>
+
+    <h2>Bonukset ja Kampanjat</h2>
+    <p>Me MrPacho Casinolla haluamme palkita pelaajamme ja tarjota heille mahdollisuuden voittaa entistä enemmän. Meidän bonukset ja kampanjat ovat suunniteltu tekemään pelikokemuksesta entistä jännittävämpää ja palkitsevampaa. Tarjoamme erilaisia bonuksia, kuten tervetuliaisbonuksia, viikoittaisia reload-bonuksia, ilmaiskierroksia ja käteispalautuksia. Meidän bonustarjouksemme eivät rajoitu vain uusille pelaajille – myös uskolliset pelaajamme voivat nauttia jatkuvista tarjouksista ja erikoiskampanjoista.</p>
+    <p><strong>MrPacho Casinon bonukset sisältävät:</strong></p>
+    <ul>
+        <li><strong>Tervetuliaisbonus:</strong> Uusille pelaajille tarjoamme 100% talletusbonuksen jopa 500€ asti sekä 200 ilmaiskierrosta.</li>
+        <li><strong>Reload-bonukset:</strong> Viikoittaisia bonuksia ja ilmaiskierroksia, jotka pitävät pelaamisen mielenkiintoisena ja palkitsevana.</li>
+        <li><strong>Ilmaiskierrokset:</strong> Erilaisia ilmaiskierroksia valituissa kolikkopeleissä osana kampanjoita.</li>
+        <li><strong>Käteispalautus:</strong> Viikoittainen käteispalautus jopa 15% pelaajien häviöistä.</li>
+    </ul>
+    <p>Bonuksemme ovat aina reiluja ja läpinäkyviä. Meidän kierrätysvaatimuksemme ovat kohtuullisia, jotta pelaajat voivat nauttia voitoistaan helposti. Tavoitteemme on, että jokainen pelaaja voi kokea sen, että heidän pelaamisensa on palkitsevaa ja hauskaa.</p>
+
+    <h2>Turvallisuus ja Luotettavuus</h2>
+    <p>Me MrPacho Casinolla pidämme turvallisuutta ja luotettavuutta tärkeimpinä arvoina. Käytämme huipputeknologiaa ja salausmenetelmiä suojataksemme pelaajiemme henkilökohtaiset tiedot ja taloudelliset tiedot. Meidän turvallisuusprosessimme takaavat, että kaikki pelit ovat reiluja ja satunnaisia. Toimimme myös Malta Gaming Authorityn (MGA) lisenssillä, mikä takaa sen, että toimintamme on läpinäkyvää ja reilua.</p>
+    <p>Pelaajamme voivat olla varmoja siitä, että heidän tietonsa ja rahansa ovat turvassa meillä. Käytämme SSL-salausta suojataksemme kaikki rahansiirrot ja henkilökohtaiset tiedot, joten pelaaminen MrPacho Casinolla on turvallista ja huolettomaa.</p>
+
+    <h2>Asiakaspalvelu</h2>
+    <p>Me MrPacho Casinolla ymmärrämme, että asiakaspalvelu on yksi tärkeimmistä osa-alueista, joka vaikuttaa pelaajien kokemukseen. Siksi tarjoamme asiakaspalvelua 24/7 ja olemme aina valmiita auttamaan sinua kaikissa kysymyksissäsi ja ongelmissasi. Voit ottaa yhteyttä asiakaspalveluumme live-chatin, sähköpostin tai puhelimen kautta – valitse sinulle sopivin tapa!</p>
+    <p>Meidän asiakaspalvelumme on ystävällistä, asiantuntevaa ja valmis auttamaan kaikissa tilanteissa. Olitpa sitten uusi pelaaja tai kokenut kasinoveteraani, me autamme sinua mielellämme kaikissa kysymyksissä, joita sinulla saattaa olla.</p>
+
+    <h2>Vastuullinen Pelaaminen</h2>
+    <p>Me MrPacho Casinolla otamme vastuullisen pelaamisen vakavasti. Haluamme varmistaa, että pelaaminen on hauskaa, mutta emme unohda pelaajien hyvinvointia. Me tarjoamme useita työkaluja, jotka auttavat pelaajia hallitsemaan pelikäyttäytymistään, kuten talletusrajoituksia, pelitaukoja ja itsensä estämistä.</p>
+    <p>Pelaaminen tulisi olla viihdyttävää ja kontrolloitua, ja me tarjoamme tukea niille, jotka saattavat kokea pelaamisen ongelmalliseksi. Jos tarvitset apua, ota yhteyttä asiakaspalveluumme, ja autamme sinua löytämään tarvittavat resurssit ja tuen.</p>
+
+    <h2>Yhteenveto</h2>
+    <p>MrPacho Casino on suunniteltu pelaajille, jotka arvostavat laadukasta pelivalikoimaa, huipputason bonuksia ja turvallista pelikokemusta. Me panostamme jatkuvasti parempaan pelikokemukseen ja tarjoamme pelaajillemme reilut mahdollisuudet voittaa suuria palkintoja. Meidän tavoitteemme on olla paras valinta pelaajille, jotka etsivät hauskaa, turvallista ja palkitsevaa kasinokokemusta. Liity MrPacho Casinolle tänään ja nauti kaikista eduista!</p>
+        </div>
+      </section>
+    </main>
+
+    <div class="updated">
+      <div class="container"><strong>Päivitetty:</strong> <span id="updated-date"></span></div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container">
+        <h2 class="section-title">Luotetut kumppanit</h2>
+        <div class="trust-grid">
+          <div class="trust-item"><a href="https://www.gambleaware.org/" target="_blank" rel="noopener noreferrer"><img src="../trust bages/gambleaware.png" alt="GambleAware" /></a></div>
+          <div class="trust-item"><a href="https://www.dmca.com/" target="_blank" rel="noopener noreferrer"><img src="../trust bages/dmca.png" alt="DMCA" /></a></div>
+          <div class="trust-item"><a href="https://www.cga.cw/" target="_blank" rel="noopener noreferrer"><img src="../trust bages/cga.jpeg" alt="CGA" /></a></div>
+        </div>
+
+        <nav class="footer-links" aria-label="Alatunnisteen linkit">
+          <a href="../about-us/">Tietoa meistä</a>
+          <a href="../contact-us/">Ota yhteyttä</a>
+          <a href="../bonus-policy/">Bonuskäytäntö</a>
+          <a href="../privacy-policy/">Tietosuojakäytäntö</a>
+          <a href="../terms-and-conditions/">Käyttöehdot</a>
+          <a href="../responsible-gambling/">Vastuullinen pelaaminen</a>
+        </nav>
+
+        <p class="copyright">2026 Copyright MrPacho Casino. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      const updatedDate = new Date();
+      document.getElementById("updated-date").textContent = updatedDate.toLocaleDateString("fi-FI", {
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric"
+      });
+    </script>
+  </body>
+</html>

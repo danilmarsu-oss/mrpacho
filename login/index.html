@@ -1,0 +1,580 @@
+<!doctype html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MrPacho Casino Kirjaudu Sisään - Pelaa Parhailla Bonuksilla!</title>
+    <meta name="description" content="Kirjaudu MrPacho Casinolle ja nauti jännittävästä pelikokemuksesta. Tervetuloa takaisin - pääset nauttimaan bonuksista, laajasta pelivalikoimasta ja huikeista voitoista!" />
+    <link rel="icon" type="image/x-icon" href="../favicon (2).ico" />
+    <style>
+      :root {
+        --page-bg: #161821;
+        --header-footer: #3f405b;
+        --login: #90aaf2;
+        --register: #6eca02;
+        --cta: #5fc500;
+        --text: #f4f6ff;
+        --card-bg: #222536;
+        --muted: #bac0de;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+        background: var(--page-bg);
+        color: var(--text);
+        line-height: 1.55;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .container {
+        width: min(1200px, 92%);
+        margin: 0 auto;
+      }
+
+      .site-header {
+        background: var(--header-footer);
+        position: sticky;
+        top: 0;
+        z-index: 20;
+      }
+
+      .header-wrap {
+        min-height: 82px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 10px 0;
+      }
+
+      .logo {
+        width: 190px;
+      }
+
+      .header-actions {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      .btn {
+        border: 0;
+        border-radius: 10px;
+        color: #0f1020;
+        font-weight: 700;
+        padding: 12px 18px;
+        cursor: pointer;
+      }
+
+      .btn-login {
+        background: var(--login);
+      }
+
+      .btn-register {
+        background: var(--register);
+      }
+
+      .hero {
+        padding: 52px 0 40px;
+        text-align: center;
+      }
+
+      h1,
+      h2,
+      h3 {
+        line-height: 1.2;
+      }
+
+      .hero h1 {
+        font-size: clamp(2rem, 4vw, 3.4rem);
+        margin: 0 0 22px;
+      }
+
+      .hero-intro {
+        max-width: 900px;
+        margin: 0 auto 24px;
+        color: var(--muted);
+      }
+
+      .hero-banner {
+        margin: 0 auto;
+        width: min(100%, 930px);
+        border-radius: 18px;
+        border: 2px solid #3d4264;
+      }
+
+      .cta {
+        display: inline-block;
+        margin-top: 24px;
+        background: var(--cta);
+        color: #0f1800;
+        font-size: 1.1rem;
+        font-weight: 800;
+        padding: 15px 34px;
+        border-radius: 999px;
+        animation: pulse 1.9s infinite;
+        box-shadow: 0 0 0 0 rgba(95, 197, 0, 0.7);
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+          box-shadow: 0 0 0 0 rgba(95, 197, 0, 0.7);
+        }
+        70% {
+          transform: scale(1.05);
+          box-shadow: 0 0 0 14px rgba(95, 197, 0, 0);
+        }
+        100% {
+          transform: scale(1);
+          box-shadow: 0 0 0 0 rgba(95, 197, 0, 0);
+        }
+      }
+
+      section {
+        padding: 34px 0;
+      }
+
+      .section-title {
+        font-size: clamp(1.5rem, 2.4vw, 2.2rem);
+        margin: 0 0 18px;
+      }
+
+      .games-grid {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .game-card {
+        background: var(--card-bg);
+        border-radius: 12px;
+        overflow: hidden;
+        border: 1px solid #363a56;
+        aspect-ratio: 1 / 1;
+      }
+
+      .game-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .seo-box {
+        background: #1d2030;
+        border: 1px solid #353954;
+        border-radius: 14px;
+        padding: 24px;
+      }
+
+      .seo-box p,
+      .seo-box li,
+      .seo-box td,
+      .seo-box th {
+        color: var(--muted);
+      }
+
+      .seo-box h3 {
+        margin-top: 24px;
+      }
+
+      .content-image {
+        width: min(100%, 960px);
+        border-radius: 14px;
+        border: 1px solid #404767;
+        margin: 16px auto;
+      }
+
+      .seo-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 15px;
+        overflow: hidden;
+      }
+
+      .seo-table th,
+      .seo-table td {
+        border: 1px solid #424763;
+        padding: 10px;
+        text-align: left;
+      }
+
+      .seo-table th {
+        color: #fff;
+        background: #2a2f45;
+      }
+
+      .payments-grid,
+      .trust-grid {
+        display: grid;
+        grid-template-columns: repeat(7, minmax(80px, 1fr));
+        gap: 10px;
+        align-items: center;
+      }
+
+      .payments-item,
+      .trust-item {
+        background: #1f2233;
+        border: 1px solid #353a58;
+        border-radius: 10px;
+        padding: 10px;
+        min-height: 74px;
+        display: grid;
+        place-items: center;
+      }
+
+      .payments-item img,
+      .trust-item img {
+        max-height: 40px;
+        width: auto;
+      }
+
+      .reviews {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .review-card {
+        background: #1f2234;
+        border: 1px solid #323754;
+        border-radius: 12px;
+        padding: 18px;
+      }
+
+      .review-author {
+        color: #c8d0f8;
+        font-weight: 700;
+        margin-top: 14px;
+      }
+
+      .faq details {
+        background: #1d2030;
+        border: 1px solid #353a58;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        padding: 12px 15px;
+      }
+
+      .faq summary {
+        cursor: pointer;
+        font-weight: 700;
+      }
+
+      .faq p {
+        color: var(--muted);
+        margin: 10px 0 0;
+      }
+
+      .updated {
+        padding: 12px 0 22px;
+        text-align: center;
+        color: #d7dcfa;
+      }
+
+      .site-footer {
+        background: var(--header-footer);
+        padding: 24px 0 18px;
+      }
+
+      .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 16px;
+      }
+
+      .footer-links a {
+        color: #e8ebff;
+        border-bottom: 1px solid transparent;
+      }
+
+      .footer-links a:hover {
+        border-color: #e8ebff;
+      }
+
+      .copyright {
+        margin-top: 18px;
+        color: #dce1ff;
+      }
+
+      @media (max-width: 980px) {
+        .games-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .payments-grid,
+        .trust-grid {
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 740px) {
+        .header-wrap {
+          flex-direction: column;
+          justify-content: center;
+        }
+
+        .reviews {
+          grid-template-columns: 1fr;
+        }
+
+        .games-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .payments-grid,
+        .trust-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+    </style>
+    <style>
+      .doc-content h1 {
+        margin-top: 0;
+        font-size: clamp(2rem, 3.8vw, 3rem);
+      }
+
+      .doc-content table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 16px;
+      }
+
+      .doc-content th,
+      .doc-content td {
+        border: 1px solid #424763;
+        padding: 10px;
+        text-align: left;
+        color: var(--muted);
+      }
+
+      .doc-content th {
+        color: #fff;
+        background: #2a2f45;
+      }
+
+      .doc-content a {
+        color: #b8caff;
+        text-decoration: underline;
+      }
+
+      .doc-content .faq-item {
+        background: #1f2234;
+        border: 1px solid #323754;
+        border-radius: 12px;
+        padding: 16px;
+        margin: 12px 0;
+      }
+
+      .doc-content .form-card {
+        background: #1f2234;
+        border: 1px solid #323754;
+        border-radius: 12px;
+        padding: 18px;
+        margin: 18px 0 24px;
+      }
+
+      .doc-content .form-row {
+        margin-bottom: 12px;
+      }
+
+      .doc-content label {
+        display: block;
+        color: #e6ebff;
+        font-weight: 700;
+        margin-bottom: 6px;
+      }
+
+      .doc-content input,
+      .doc-content textarea {
+        width: 100%;
+        background: #161821;
+        color: #f4f6ff;
+        border: 1px solid #3a4060;
+        border-radius: 10px;
+        padding: 11px 12px;
+        font: inherit;
+      }
+
+      .doc-content input:focus,
+      .doc-content textarea:focus {
+        outline: none;
+        border-color: #90aaf2;
+        box-shadow: 0 0 0 2px rgba(144, 170, 242, 0.2);
+      }
+
+      .doc-content .form-inline {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        margin: 8px 0 14px;
+        flex-wrap: wrap;
+      }
+
+      .doc-content .checkline {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--muted);
+        font-weight: 400;
+        margin: 0;
+      }
+
+      .doc-content .checkline input {
+        width: auto;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-wrap">
+        <a href="../" aria-label="MrPacho Casino etusivu">
+          <img class="logo" src="../mrpacho logo.svg" alt="MrPacho Casino logo" />
+        </a>
+
+        <div class="header-actions">
+          <a class="btn btn-login" href="../login/">Kirjaudu sisään</a>
+          <a class="btn btn-register" href="#">Rekisteröidy</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <div class="container seo-box doc-content">
+    <h1>Kirjaudu Sisään MrPacho Casinolle</h1>
+    <p>Tervetuloa takaisin MrPacho Casinolle! Jos olet jo rekisteröitynyt pelitilillemme, voit kirjautua sisään ja jatkaa pelaamista heti. Me MrPacho Casinolla tarjoamme sinulle jännittävän ja turvallisen pelikokemuksen, joka on aina käden ulottuvilla. Kirjautumalla sisään saat pääsyn huikeisiin bonuksiin, upeaan pelivalikoimaan ja uusimpiin kampanjoihimme. Ei ole väliä, oletko kolikkopelien, pöytäpelien vai live-kasinon ystävä, meillä on kaikkea tarjottavana sinulle. Kirjaudu sisään ja nauti pelaamisesta!</p>
+
+    <form class="form-card" action="#" method="post">
+        <h2>Kirjaudu sisään</h2>
+        <div class="form-row">
+            <label for="login-user">Sähköposti tai käyttäjätunnus</label>
+            <input id="login-user" name="login_user" type="text" autocomplete="username" required />
+        </div>
+        <div class="form-row">
+            <label for="login-password">Salasana</label>
+            <input id="login-password" name="login_password" type="password" autocomplete="current-password" required />
+        </div>
+        <div class="form-inline">
+            <label class="checkline" for="remember-me">
+                <input id="remember-me" name="remember_me" type="checkbox" />
+                Muista minut
+            </label>
+            <a href="#">Unohditko salasanan?</a>
+        </div>
+        <button class="btn btn-login" type="submit">Kirjaudu sisään</button>
+    </form>
+
+    <h2>Kirjautumisen Vaiheet</h2>
+    <p>Kirjautuminen MrPacho Casinolle on nopeaa ja helppoa. Seuraa alla olevia ohjeita ja pääset peliin ilman turhia viiveitä:</p>
+    <ol>
+        <li>Avaa MrPacho Casinon verkkosivusto ja siirry kirjautumissivulle.</li>
+        <li>Syötä pelitunnuksesi tai sähköpostiosoitteesi sekä salasanasi.</li>
+        <li>Paina "Kirjaudu sisään" -painiketta ja pääset suoraan pelitilillesi.</li>
+        <li>Jos olet unohtanut salasanasi, voit käyttää "Unohditko salasanan?" -linkkiä salasanan palauttamiseksi.</li>
+    </ol>
+    <p>Kun olet kirjautunut sisään, voit aloittaa pelaamisen välittömästi ja nauttia kaikista MrPacho Casinon tarjoamista eduista, bonuksista ja peleistä.</p>
+
+    <h2>Unohditko Salasanasi?</h2>
+    <p>Älä huoli, jos olet unohtanut salasanasi! Me MrPacho Casinolla teemme salasanan palauttamisesta helppoa ja nopeaa. Seuraa alla olevia ohjeita, niin saat uuden salasanan ja pääset takaisin pelaamaan:</p>
+    <ol>
+        <li>Napsauta "Unohditko salasanan?" -linkkiä kirjautumissivulla.</li>
+        <li>Syötä rekisteröimäsi sähköpostiosoite.</li>
+        <li>Me lähetämme sinulle ohjeet salasanan palauttamiseen sähköpostiisi.</li>
+        <li>Noudata saamiasi ohjeita ja aseta uusi salasana.</li>
+    </ol>
+    <p>Kun olet saanut uuden salasanan, voit palata kirjautumissivulle ja kirjautua sisään normaalisti. Muista valita vahva salasana, joka suojaa pelitiliäsi turvallisesti.</p>
+
+    <h2>Miksi Kirjautua MrPacho Casinolle?</h2>
+    <p>Kirjautuminen MrPacho Casinolle tuo mukanaan monia etuja. Me MrPacho Casinolla uskomme, että pelaaminen ei ole vain hauskaa, vaan sen tulee olla myös turvallista ja luotettavaa. Tässä muutamia syitä, miksi sinun kannattaa kirjautua sisään ja pelata kanssamme:</p>
+    <ul>
+        <li><strong>Suuri pelivalikoima:</strong> Meillä on laaja valikoima pelejä, kuten kolikkopelejä, pöytäpelejä, live-kasinopelejä ja erikoispelejä. Kirjautumalla sisään pääset pelaamaan suosikkejasi ja kokeilemaan uusia pelejä!</li>
+        <li><strong>Erinomaiset bonukset:</strong> Me tarjoamme jatkuvasti houkuttelevia bonuksia ja kampanjoita, jotka auttavat sinua saamaan lisää pelirahaa ja voittomahdollisuuksia. Kirjautumalla sisään saat pääsyn kaikkiin ajankohtaisiin tarjouksiin!</li>
+        <li><strong>Turvallisuus ja luotettavuus:</strong> MrPacho Casino toimii Malta Gaming Authorityn (MGA) lisenssillä, mikä takaa turvallisuuden ja reilun pelaamisen. Voit pelata meillä luottavaisin mielin.</li>
+        <li><strong>Asiakaspalvelu:</strong> Tarjoamme asiakaspalvelua ympäri vuorokauden. Jos sinulla on kysyttävää, voit aina ottaa yhteyttä asiakaspalveluumme ja saada apua nopeasti ja ystävällisesti.</li>
+        <li><strong>Jatkuvat päivitykset ja uudet kampanjat:</strong> Me pidämme pelaajamme ajan tasalla uusista kampanjoista, pelipäivityksistä ja erikoistarjouksista. Kirjautumalla sisään et jää paitsi mistään!</li>
+    </ul>
+
+    <h2>Voinko Kirjautua Sisään Mobiililaitteella?</h2>
+    <p>Kyllä, voit kirjautua sisään MrPacho Casinolle myös mobiililaitteella! Meidän mobiilisivustomme on optimoitu niin, että voit nauttia kaikista peleistä, bonuksista ja kampanjoista suoraan älypuhelimellasi tai tabletillasi. Olitpa sitten kotona tai liikkeellä, pääset aina nauttimaan huippuluokan pelikokemuksesta. Kirjautuminen mobiililaitteella on yhtä helppoa kuin tietokoneella!</p>
+
+    <h2>Turvallisuus ja Yksityisyys</h2>
+    <p>Me MrPacho Casinolla pidämme huolta pelaajiemme turvallisuudesta ja yksityisyydestä. Käytämme edistyksellisiä SSL-salausmenetelmiä varmistaaksemme, että kaikki henkilökohtaiset ja taloudelliset tietosi pysyvät suojattuina. Voit pelata meillä huoletta, sillä kaikki tiedot käsitellään luottamuksellisesti ja turvallisesti. Kirjautuessasi sisään pelitilillesi me varmistamme, että kaikki tapahtumat ovat turvassa ja suojattuja.</p>
+
+    <h2>Usein Kysytyt Kysymykset</h2>
+    <div class="faq-item">
+        <h3>Kuinka voin palauttaa salasanani?</h3>
+        <p>Jos olet unohtanut salasanasi, voit palauttaa sen napsauttamalla "Unohditko salasanan?" -linkkiä kirjautumissivulla. Syötä sähköpostiosoitteesi, ja saat ohjeet salasanan palauttamiseksi.</p>
+    </div>
+    <div class="faq-item">
+        <h3>Voinko kirjautua mobiililaitteella?</h3>
+        <p>Kyllä, voit helposti kirjautua sisään MrPacho Casinolle myös mobiililaitteella. Meidän mobiilisivustomme on täysin optimoitu ja toimii sujuvasti kaikilla älypuhelimilla ja tableteilla.</p>
+    </div>
+    <div class="faq-item">
+        <h3>Onko MrPacho Casino turvallinen?</h3>
+        <p>Kyllä, MrPacho Casino toimii Malta Gaming Authorityn (MGA) lisenssillä, ja käytämme edistyksellisiä turvatoimia, kuten SSL-salausta, varmistaaksemme, että kaikki pelaajat voivat pelata turvallisesti.</p>
+    </div>
+    <div class="faq-item">
+        <h3>Miten voin ottaa yhteyttä asiakaspalveluun?</h3>
+        <p>Asiakaspalvelumme on käytettävissä ympäri vuorokauden. Voit ottaa yhteyttä meihin sähköpostitse tai live-chatin kautta, ja autamme sinua mielellämme.</p>
+    </div>
+
+    <h2>Yhteenveto</h2>
+    <p>Kirjautuminen MrPacho Casinolle on nopeaa, helppoa ja turvallista. Pääset nauttimaan laajasta pelivalikoimastamme, erinomaisista bonuksista ja jatkuvasti päivitettävistä kampanjoista. Jos unohdat salasanasi, meillä on helppo ja nopea salasanan palautusprosessi. Me pidämme huolta pelaajiemme turvallisuudesta ja yksityisyydestä, joten voit pelata luottavaisin mielin. Kirjautuessasi sisään pääset heti nauttimaan parhaista peleistä ja voitoista. Liity nyt ja aloita pelaaminen MrPacho Casinolla!</p>
+        </div>
+      </section>
+    </main>
+
+    <div class="updated">
+      <div class="container"><strong>Päivitetty:</strong> <span id="updated-date"></span></div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container">
+        <h2 class="section-title">Luotetut kumppanit</h2>
+        <div class="trust-grid">
+          <div class="trust-item"><a href="https://www.gambleaware.org/" target="_blank" rel="noopener noreferrer"><img src="../trust bages/gambleaware.png" alt="GambleAware" /></a></div>
+          <div class="trust-item"><a href="https://www.dmca.com/" target="_blank" rel="noopener noreferrer"><img src="../trust bages/dmca.png" alt="DMCA" /></a></div>
+          <div class="trust-item"><a href="https://www.cga.cw/" target="_blank" rel="noopener noreferrer"><img src="../trust bages/cga.jpeg" alt="CGA" /></a></div>
+        </div>
+
+        <nav class="footer-links" aria-label="Alatunnisteen linkit">
+          <a href="../about-us/">Tietoa meistä</a>
+          <a href="../contact-us/">Ota yhteyttä</a>
+          <a href="../bonus-policy/">Bonuskäytäntö</a>
+          <a href="../privacy-policy/">Tietosuojakäytäntö</a>
+          <a href="../terms-and-conditions/">Käyttöehdot</a>
+          <a href="../responsible-gambling/">Vastuullinen pelaaminen</a>
+        </nav>
+
+        <p class="copyright">2026 Copyright MrPacho Casino. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      const updatedDate = new Date();
+      document.getElementById("updated-date").textContent = updatedDate.toLocaleDateString("fi-FI", {
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric"
+      });
+    </script>
+  </body>
+</html>

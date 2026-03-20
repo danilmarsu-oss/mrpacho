@@ -1,0 +1,810 @@
+<!doctype html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MrPacho Casino - 500€ + 200 FS Bonus ja Upeat Pelit Odottavat Sinua!</title>
+    <meta name="title" content="MrPacho Casino - 500€ + 200 FS Bonus ja Upeat Pelit Odottavat Sinua!" />
+    <meta
+      name="description"
+      content="Liity MrPacho Casinoon ja nauti 500€ + 200 FS tervetuliaisbonuksesta, laajasta pelivalikoimasta sekä turvallisesta pelikokemuksesta. Pelaa kolikkopelejä, pöytäpelejä ja live-kasinoa parhaiden pelintarjoajien peleillä. Tervetuloa MrPacho Casinolle!"
+    />
+    <link rel="icon" type="image/x-icon" href="favicon (2).ico" />
+    <style>
+      :root {
+        --page-bg: #161821;
+        --header-footer: #3f405b;
+        --login: #90aaf2;
+        --register: #6eca02;
+        --cta: #5fc500;
+        --text: #f4f6ff;
+        --card-bg: #222536;
+        --muted: #bac0de;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+        background: var(--page-bg);
+        color: var(--text);
+        line-height: 1.55;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .container {
+        width: min(1200px, 92%);
+        margin: 0 auto;
+      }
+
+      .site-header {
+        background: var(--header-footer);
+        position: sticky;
+        top: 0;
+        z-index: 20;
+      }
+
+      .header-wrap {
+        min-height: 82px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 10px 0;
+      }
+
+      .logo {
+        width: 190px;
+      }
+
+      .header-actions {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      .btn {
+        border: 0;
+        border-radius: 10px;
+        color: #0f1020;
+        font-weight: 700;
+        padding: 12px 18px;
+        cursor: pointer;
+      }
+
+      .btn-login {
+        background: var(--login);
+      }
+
+      .btn-register {
+        background: var(--register);
+      }
+
+      .hero {
+        padding: 52px 0 40px;
+        text-align: center;
+      }
+
+      h1,
+      h2,
+      h3 {
+        line-height: 1.2;
+      }
+
+      .hero h1 {
+        font-size: clamp(2rem, 4vw, 3.4rem);
+        margin: 0 0 22px;
+      }
+
+      .hero-intro {
+        max-width: 900px;
+        margin: 0 auto 24px;
+        color: var(--muted);
+      }
+
+      .hero-banner {
+        margin: 0 auto;
+        width: min(100%, 930px);
+        border-radius: 18px;
+        border: 2px solid #3d4264;
+      }
+
+      .cta {
+        display: inline-block;
+        margin-top: 24px;
+        background: var(--cta);
+        color: #0f1800;
+        font-size: 1.1rem;
+        font-weight: 800;
+        padding: 15px 34px;
+        border-radius: 999px;
+        animation: pulse 1.9s infinite;
+        box-shadow: 0 0 0 0 rgba(95, 197, 0, 0.7);
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+          box-shadow: 0 0 0 0 rgba(95, 197, 0, 0.7);
+        }
+        70% {
+          transform: scale(1.05);
+          box-shadow: 0 0 0 14px rgba(95, 197, 0, 0);
+        }
+        100% {
+          transform: scale(1);
+          box-shadow: 0 0 0 0 rgba(95, 197, 0, 0);
+        }
+      }
+
+      section {
+        padding: 34px 0;
+      }
+
+      .section-title {
+        font-size: clamp(1.5rem, 2.4vw, 2.2rem);
+        margin: 0 0 18px;
+      }
+
+      .games-grid {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .game-card {
+        background: var(--card-bg);
+        border-radius: 12px;
+        overflow: hidden;
+        border: 1px solid #363a56;
+        aspect-ratio: 1 / 1;
+      }
+
+      .game-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .seo-box {
+        background: #1d2030;
+        border: 1px solid #353954;
+        border-radius: 14px;
+        padding: 24px;
+      }
+
+      .seo-box p,
+      .seo-box li,
+      .seo-box td,
+      .seo-box th {
+        color: var(--muted);
+      }
+
+      .seo-box h3 {
+        margin-top: 24px;
+      }
+
+      .content-image {
+        width: min(100%, 960px);
+        border-radius: 14px;
+        border: 1px solid #404767;
+        margin: 16px auto;
+      }
+
+      .seo-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 15px;
+        overflow: hidden;
+      }
+
+      .seo-table th,
+      .seo-table td {
+        border: 1px solid #424763;
+        padding: 10px;
+        text-align: left;
+      }
+
+      .seo-table th {
+        color: #fff;
+        background: #2a2f45;
+      }
+
+      .payments-grid,
+      .trust-grid {
+        display: grid;
+        grid-template-columns: repeat(7, minmax(80px, 1fr));
+        gap: 10px;
+        align-items: center;
+      }
+
+      .payments-item,
+      .trust-item {
+        background: #1f2233;
+        border: 1px solid #353a58;
+        border-radius: 10px;
+        padding: 10px;
+        min-height: 74px;
+        display: grid;
+        place-items: center;
+      }
+
+      .payments-item img,
+      .trust-item img {
+        max-height: 40px;
+        width: auto;
+      }
+
+      .reviews {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .review-card {
+        background: #1f2234;
+        border: 1px solid #323754;
+        border-radius: 12px;
+        padding: 18px;
+      }
+
+      .review-author {
+        color: #c8d0f8;
+        font-weight: 700;
+        margin-top: 14px;
+      }
+
+      .faq details {
+        background: #1d2030;
+        border: 1px solid #353a58;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        padding: 12px 15px;
+      }
+
+      .faq summary {
+        cursor: pointer;
+        font-weight: 700;
+      }
+
+      .faq p {
+        color: var(--muted);
+        margin: 10px 0 0;
+      }
+
+      .updated {
+        padding: 12px 0 22px;
+        text-align: center;
+        color: #d7dcfa;
+      }
+
+      .site-footer {
+        background: var(--header-footer);
+        padding: 24px 0 18px;
+      }
+
+      .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 16px;
+      }
+
+      .footer-links a {
+        color: #e8ebff;
+        border-bottom: 1px solid transparent;
+      }
+
+      .footer-links a:hover {
+        border-color: #e8ebff;
+      }
+
+      .copyright {
+        margin-top: 18px;
+        color: #dce1ff;
+      }
+
+      @media (max-width: 980px) {
+        .games-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .payments-grid,
+        .trust-grid {
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 740px) {
+        .header-wrap {
+          flex-direction: column;
+          justify-content: center;
+        }
+
+        .reviews {
+          grid-template-columns: 1fr;
+        }
+
+        .games-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .payments-grid,
+        .trust-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-wrap">
+        <a href="#" aria-label="MrPacho Casino etusivu">
+          <img class="logo" src="mrpacho logo.svg" alt="MrPacho Casino logo" />
+        </a>
+
+        <div class="header-actions">
+          <a class="btn btn-login" href="login/">Kirjaudu sisään</a>
+          <a class="btn btn-register" href="#">Rekisteröidy</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <h1>MrPacho Casino</h1>
+          <p class="hero-intro">
+            Olemme iloisia, että löysit tiellesi MrPacho Casinolle! Meillä voit nauttia huippuluokan peleistä,
+            upeista bonuksista ja erinomaisista voittomahdollisuuksista. MrPacho on paikka, jossa jännitys ja
+            hauskanpito eivät lopu koskaan. Liity joukkoomme ja koe, miksi me olemme yksi parhaista kasinoista
+            verkossa. Tervetuloa pelaamaan ja voittamaan Mr Pacho Casinolla!
+          </p>
+          <img
+            class="hero-banner"
+            src="mrpacho images/mrpacho casino.webp"
+            alt="MrPacho Casino banner"
+          />
+          <a class="cta" href="#">Pelaa nyt!</a>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <h2 class="section-title">Suositut pelit</h2>
+          <div class="games-grid">
+            <article class="game-card"><img src="game images/aviatorlogo.png" alt="Aviator" /></article>
+            <article class="game-card"><img src="game images/poker arena.jpeg" alt="Poker Arena" /></article>
+            <article class="game-card"><img src="game images/blackjackpro.png" alt="Blackjack Pro" /></article>
+            <article class="game-card"><img src="game images/roulette live.avif" alt="Roulette Live" /></article>
+            <article class="game-card"><img src="game images/lightning dice.jpg" alt="Lightning Dice" /></article>
+            <article class="game-card"><img src="game images/crazytime.webp" alt="Crazy Time" /></article>
+            <article class="game-card"><img src="game images/jackpotcity.webp" alt="Jackpot City" /></article>
+            <article class="game-card"><img src="game images/megaslots.jpeg" alt="Mega Slots" /></article>
+            <article class="game-card"><img src="game images/baccaratvip.jpg" alt="Baccarat VIP" /></article>
+            <article class="game-card"><img src="game images/bookofgold.png" alt="Book of Gold" /></article>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container seo-box">
+          <h2>Tietoa MrPacho Casinosta</h2>
+          <p>
+            Me MrPacho Casinolla tarjoamme pelaajille ainutlaatuisen ja viihdyttävän pelikokemuksen. Olemme
+            lanseeranneet palvelumme nykyaikaisella otteella ja panostamme luotettavuuteen, turvallisuuteen sekä
+            monipuolisuuteen. Meillä voit pelata suosituimpia kasinopelejä helposti eri laitteilla ja nauttia
+            erinomaisista bonuksista sekä asiakastuesta. Mr Pacho Casino toimii lisensoidusti ja tarjoaa monipuoliset
+            maksutavat, useita pelivaluuttoja sekä suomenkielisen käyttöliittymän. Pyrimme aina olemaan pelaajien
+            ykkösvalinta verkossa.
+          </p>
+
+          <table class="seo-table">
+            <thead>
+              <tr>
+                <th>Tieto</th>
+                <th>Arvo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Vuosi lanseeraus</td>
+                <td>2024</td>
+              </tr>
+              <tr>
+                <td>Omistaja</td>
+                <td>MrPacho Gaming Ltd</td>
+              </tr>
+              <tr>
+                <td>Lisenssi</td>
+                <td>Malta Gaming Authority (MGA)</td>
+              </tr>
+              <tr>
+                <td>Virallinen sivusto</td>
+                <td>mr-pacho.fi</td>
+              </tr>
+              <tr>
+                <td>Valuutat</td>
+                <td>EUR, USD, NOK</td>
+              </tr>
+              <tr>
+                <td>Minimi talletus</td>
+                <td>10 €</td>
+              </tr>
+              <tr>
+                <td>Maksutavat</td>
+                <td>Visa, Mastercard, E-lompakot, Pankkisiirto</td>
+              </tr>
+              <tr>
+                <td>Pelit</td>
+                <td>Kolikkopelit, live-kasino, pöytäpelit</td>
+              </tr>
+              <tr>
+                <td>Kielet</td>
+                <td>Suomi, Englanti, Ruotsi</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3>Kuinka rekisteröityä MrPacho Casinolle</h3>
+          <img
+            class="content-image"
+            src="mrpacho images/mrpacho registration.webp"
+            alt="Rekisteröityminen MrPacho Casinolle"
+          />
+          <p>
+            Rekisteröityminen MrPacho Casinolle on nopeaa ja helppoa. Se vie vain muutaman minuutin ja pääset heti
+            nauttimaan kaikista tarjoamistamme peleistä ja bonuksista. Seuraamalla yksinkertaisia ohjeita voit avata
+            pelitilin ja aloittaa pelaamisen ilman turhia viiveitä. Lue alta ohjeet siitä, kuinka rekisteröidyt
+            MrPacho Casinolle ja aloitat jännittävän matkan kanssamme!
+          </p>
+          <ol>
+            <li>
+              Siirry viralliselle sivustolle:
+              <a href="https://mr-pacho.fi" target="_blank" rel="noopener noreferrer">mr-pacho.fi</a>
+            </li>
+            <li>Napsauta "Rekisteröidy" tai "Aloita pelaaminen" -painiketta</li>
+            <li>Täytä tarvittavat tiedot, kuten nimi, sähköposti ja syntymäaika</li>
+            <li>Valitse haluamasi maksutapa ja talleta ensimmäinen summa</li>
+            <li>Vahvista sähköpostiosoitteesi ja pelaa</li>
+          </ol>
+
+          <h3>Mr Pacho Casino Bonukset</h3>
+          <img class="content-image" src="mrpacho images/mrpacho bonuses.webp" alt="MrPacho bonukset" />
+          <p>
+            Me MrPacho Casinolla tarjoamme monipuoliset ja jännittävät bonukset kaikille pelaajille. Bonuksemme on
+            suunniteltu palkitsemaan sekä uusia että aktiivisia pelaajia, ja ne sisältävät tervetuliaisbonuksia,
+            ilmaispyöräytyksiä ja käteispalautuksia. Kasino MrPacho tarjoaa säännöllisiä kampanjoita, jotka lisäävät
+            pelikassaasi ja tuovat hauskuutta joka viikko. Tutustu alla oleviin bonusvaihtoehtoihin ja hyödynnä ne
+            heti!
+          </p>
+
+          <h3>Tervetuliaisbonus</h3>
+          <p>
+            Uusille pelaajille tarjoamme 100% talletusbonuksen jopa 500€ + 200 ilmaiskierrosta. Tämä
+            tervetuliaisbonus auttaa sinua aloittamaan pelaamisen vahvasti ja tutustumaan suosituimpiin peleihin.
+          </p>
+
+          <h3>Crypto Tervetuliaisbonus</h3>
+          <p>
+            Jos talletat kryptovaluutalla, saat jopa 200% bonus aina 3 000 USDT asti. Se on täydellinen etu
+            kryptopelaajille, jotka haluavat maksimoida voittonsa.
+          </p>
+
+          <h3>Viikoittainen Ilmaispyöräytysbonus</h3>
+          <p>
+            Joka viikko tarjoamme 50 ilmaiskierrosta pelaajille. Nämä ilmaispyöräytykset ovat loistava tapa lisätä
+            voittoja ilman lisätalletuksia.
+          </p>
+
+          <h3>Viikonloppu Reload-Bonus</h3>
+          <p>
+            Viikonloppuisin saat jopa 700€ bonus + 50 ilmaiskierrosta. Tämä reload-bonus nostaa viikonlopun jännitystä
+            ja pelikassaa!
+          </p>
+
+          <h3>Käteispalautus</h3>
+          <p>
+            Tarjoamme myös viikoittaisen 15% käteispalautuksen jopa 3 000€ asti, sekä 25% live-kasinon käteistä jopa
+            200€ asti. Näin saat osan häviöistä takaisin pelitilillesi.
+          </p>
+
+          <h3>Krypto Reload-Bonus</h3>
+          <p>
+            Kryptopelaajille on viikoittainen 60% reload-bonus jopa 1 000 USDT. Tämä bonus tarjoaa lisää pelirahaa
+            krypton tallettajille!
+          </p>
+
+          <h3>MrPacho Casino Pelivalikoima</h3>
+          <img class="content-image" src="mrpacho images/mrpacho games.webp" alt="MrPacho pelivalikoima" />
+          <p>
+            Me MrPacho Casinolla tarjoamme laajan pelivalikoiman, joka kattaa kolikkopelit, pöytäpelit, live-kasinon
+            ja erikoispelit. Valikoima on suunniteltu viihdyttämään jokaista pelaajaa helposti selaamalla eri
+            kategorioita.
+          </p>
+          <table class="seo-table">
+            <thead>
+              <tr>
+                <th>Pelityyppi</th>
+                <th>Kuvaus</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Kolikkopelit</td>
+                <td>Laaja valikoima suosituimpia video- ja klassisia kolikkopelejä.</td>
+              </tr>
+              <tr>
+                <td>Pöytäpelit</td>
+                <td>Perinteiset kasinopelit kuten blackjack ja ruletti.</td>
+              </tr>
+              <tr>
+                <td>Live-kasino</td>
+                <td>Live-jakajien kanssa pelattavat oikean kasinon kokemukset.</td>
+              </tr>
+              <tr>
+                <td>Erikoispelit</td>
+                <td>Raaputusarvat ja muut nopeat pelit lisäjännityksellä.</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3>Kolikkopelit</h3>
+          <p>
+            MrPacho Casinolla pääset nauttimaan laajasta kolikkopelivalikoimasta, joka sisältää niin klassisia
+            hedelmäpelejä kuin moderneja videopelejä. Löydät pelejä erilaisilla teemoilla, erikoistoiminnoilla ja
+            upeilla grafiikoilla. Kolikkopelit tarjoavat monia mahdollisuuksia suurten voittojen saamiseen ja
+            hauskanpitoon, joten ei ole koskaan tylsää pelata!
+          </p>
+
+          <h3>Pöytäpelit</h3>
+          <p>
+            Jos nautit perinteisistä kasinopeleistä, MrPacho Casinolla on tarjolla monia pöytäpelejä, kuten ruletti,
+            blackjack ja baccarat. Nämä pelit tarjoavat aitoa kasinotunnelmaa ja vaativat taitoa, jotta voit voittaa
+            suuria potteja. Jokaisella pelillä on omat sääntönsä, ja tarjoamme myös erilaisia variantteja, joista
+            löydät varmasti oman suosikkisi.
+          </p>
+
+          <h3>Live-kasino</h3>
+          <img class="content-image" src="mrpacho images/mrpacho live games.webp" alt="MrPacho live-kasino" />
+          <p>
+            Live-kasino on täydellinen vaihtoehto, jos etsit aitoa ja reaaliaikaista pelikokemusta. Voit pelata
+            suosikkipelejäsi kuten blackjackia, rulettia tai pokeria oikeiden jakajien kanssa. Live-kasinossa tunnelma
+            on intensiivinen ja pelit etenevät reaaliajassa, joten pääset nauttimaan kasinon elävästä energiasta
+            suoraan kotisohvaltasi. Tämä on paras vaihtoehto, jos haluat kokea oikean kasinon jännityksen ilman
+            matkustamista!
+          </p>
+
+          <h3>Erikoispelit</h3>
+          <p>
+            Erikoispelit ovat täydellinen valinta, jos haluat kokeilla jotain uutta ja hauskaa. Me MrPacho Casinolla
+            tarjoamme laajan valikoiman erikoispelejä, kuten raaputusarpoja, bingoa ja muita nopeatempoisia pelejä.
+            Nämä pelit ovat täydellisiä, jos etsit nopeita tuloksia ja hauskaa viihdettä. Kokeile onneasi ja voita
+            suuria palkintoja helposti ja nopeasti!
+          </p>
+
+          <h3>MrPacho Casino Pelintarjoajat</h3>
+          <p>
+            Me MrPacho Casinolla teemme yhteistyötä alan johtavien pelintarjoajien kanssa varmistaaksemme, että
+            pelikokemuksesi on monipuolinen, viihdyttävä ja laadukas. Tarjoamme pelejä useilta tunnetuilta
+            pelistudioilta, jotka tunnetaan innovatiivisista ominaisuuksistaan, upeasta grafiikastaan ja reiluista
+            voittomahdollisuuksistaan. Olitpa sitten kolikkopelien, pöytäpelien tai live-kasinon ystävä, löydät
+            varmasti suosikkisi valikoimastamme. Yhteistyömme huippubrändien kanssa takaa, että MrPacho Casino on
+            paikka, jossa jokainen pelaaja voi nauttia parhaista peleistä turvallisesti ja sujuvasti.
+          </p>
+          <ul>
+            <li>NetEnt</li>
+            <li>Play’n GO</li>
+            <li>Microgaming</li>
+            <li>Evolution Gaming</li>
+            <li>Pragmatic Play</li>
+            <li>Betsoft</li>
+            <li>Yggdrasil</li>
+            <li>Quickspin</li>
+          </ul>
+
+          <h3>Mobile Gaming MrPacho Casinolla</h3>
+          <p>
+            MrPacho Casino tarjoaa pelaajilleen saumattoman pelikokemuksen myös mobiilissa. Meidän mobiilisivustomme
+            on optimoitu niin, että voit nauttia peleistäsi missä ja milloin tahansa suoraan älypuhelimellasi tai
+            tabletillasi. Ei ole väliä, pelataanko Android- vai iOS-laitteella, sillä pelivalikoimamme ja bonukset
+            ovat täysin saatavilla mobiiliversiossa. Voit pelata suosikkikolikkopelejäsi, pöytäpelejä ja
+            live-kasinopelejä kätevästi matkalla, kotona tai vaikka kahvilassa. Pelit latautuvat nopeasti, ja
+            grafiikat säilyttävät huippulaatunsa kaikilla laitteilla. Me MrPacho Casinolla uskomme, että pelaamisen ei
+            tulisi olla sidottu tietokoneen ääreen, joten olemme varmistaneet, että mobiilipelaaminen on yhtä
+            jännittävää ja hauskaa kuin pöytäkoneella pelaaminen. Liity mukaan ja nauti kasinokokemuksesta joka
+            paikassa!
+          </p>
+
+          <h3>Turvallisuus ja Reilu Pelaaminen MrPacho Casinolla</h3>
+          <p>
+            MrPacho Casino sitoutuu tarjoamaan turvallisen ja reilun pelikokemuksen kaikille pelaajilleen. Käytämme
+            alan parhaita turvatoimia, kuten SSL-salausta, varmistaaksemme, että henkilökohtaiset ja taloudelliset
+            tietosi pysyvät suojattuina kaikissa vaiheissa. Pelit MrPacho Casinolla ovat täysin reiluja ja
+            satunnaislukugeneraattorit (RNG) takaavat, että pelitulokset ovat satunnaisia ja puolueettomia. Meillä on
+            myös käytössä tiukat vastuullisen pelaamisen periaatteet, ja tarjoamme työkaluja pelaajien auttamiseksi
+            hallitsemaan pelikäyttäytymistään. Olemme lisensoitu ja säännelty MGA:n (Malta Gaming Authority) toimesta,
+            mikä takaa, että toimintamme noudattaa alan korkeimpia standardeja. Voit pelata meillä luottavaisin mielin,
+            sillä turvallisuus ja reilu pelaaminen ovat meille ensiarvoisen tärkeitä.
+          </p>
+
+          <h3>MrPacho Maksu- ja Nostomenetelmät</h3>
+          <p>
+            MrPacho Casinolla tarjoamme laajan valikoiman turvallisia ja käteviä maksutapoja talletuksiin ja
+            nostoihin. Voit valita eri vaihtoehdoista, jotka sopivat parhaiten tarpeisiisi.
+          </p>
+          <table class="seo-table">
+            <thead>
+              <tr>
+                <th>Maksutapa</th>
+                <th>Talletus</th>
+                <th>Nosto</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Visa/Mastercard</td>
+                <td>Kyllä</td>
+                <td>Kyllä</td>
+              </tr>
+              <tr>
+                <td>PayPal</td>
+                <td>Kyllä</td>
+                <td>Kyllä</td>
+              </tr>
+              <tr>
+                <td>Skrill</td>
+                <td>Kyllä</td>
+                <td>Kyllä</td>
+              </tr>
+              <tr>
+                <td>Neteller</td>
+                <td>Kyllä</td>
+                <td>Kyllä</td>
+              </tr>
+              <tr>
+                <td>Pankkisiirto</td>
+                <td>Kyllä</td>
+                <td>Kyllä</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>
+            Me varmistamme nopean ja turvallisen rahaliikenteen, jotta pelaaminen on vaivattomampaa.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <h2 class="section-title">Maksutavat kasinolla</h2>
+          <div class="payments-grid">
+            <div class="payments-item"><img src="casino payment methods/visa.png" alt="Visa" /></div>
+            <div class="payments-item"><img src="casino payment methods/Mastercard_logo.webp" alt="Mastercard" /></div>
+            <div class="payments-item"><img src="casino payment methods/Paysafecard_logo.png" alt="Paysafecard" /></div>
+            <div class="payments-item"><img src="casino payment methods/neteller logo.png" alt="Neteller" /></div>
+            <div class="payments-item"><img src="casino payment methods/Payoneer_new_logo.png" alt="Payoneer" /></div>
+            <div class="payments-item"><img src="casino payment methods/crypto logo.png" alt="Crypto" /></div>
+            <div class="payments-item"><img src="casino payment methods/bitcoin-btc-logo.png" alt="Bitcoin" /></div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <h2 class="section-title">Käyttäjäarvostelut</h2>
+          <div class="reviews">
+            <article class="review-card">
+              <p><strong>⭐⭐⭐⭐☆ – Loistava pelikokemus!</strong></p>
+              <p>
+                "MrPacho Casino on ollut todella mukautuva ja luotettava. Pelaaminen on sujuvaa niin tietokoneella
+                kuin mobiilissa. Bonukset ovat hyviä ja pelivalikoima on valtava. Rakastan erityisesti live-kasinoa,
+                jossa jakajat ovat ystävällisiä. Ainoa pieni miinus on, että nostot voivat kestää hieman kauemmin,
+                mutta muuten olen todella tyytyväinen!"
+              </p>
+              <p class="review-author">- Mika P.</p>
+            </article>
+            <article class="review-card">
+              <p><strong>⭐⭐⭐⭐⭐ – Täydellinen valinta!</strong></p>
+              <p>
+                "MrPacho Casino tarjoaa huipputason pelikokemuksen. Asiakaspalvelu on nopeaa ja asiantuntevaa.
+                Talletukset sujuvat nopeasti ja kotiutukset ovat turvallisia. Ilmaispyöräytykset olivat mukava yllätys,
+                ja pelejä riittää joka makuun. Suosittelen lämpimästi!"
+              </p>
+              <p class="review-author">- Laura T.</p>
+            </article>
+            <article class="review-card">
+              <p><strong>⭐⭐⭐⭐☆ – Hyvin monipuolinen ja hauska!</strong></p>
+              <p>
+                "Olen nauttinut pelaamisesta MrPacho Casinolla, koska pelit ovat hauskoja ja usein on uusia
+                kampanjoita. Kolikkopelit ovat suosikkejani, mutta myös pöytäpelit ovat huippuluokkaa. Pieni miinus on,
+                että mobiilisivusto ei ole aivan yhtä nopea kuin tietokonesivusto, mutta se ei haittaa pelaamista
+                liikaa."
+              </p>
+              <p class="review-author">- Jari K.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq">
+        <div class="container">
+          <h2 class="section-title">Usein Kysytyt Kysymykset</h2>
+
+          <details>
+            <summary>Kuinka rekisteröidyn MrPacho Casinolle?</summary>
+            <p>
+              Rekisteröityminen on helppoa! Siirry vain sivustolle, napsauta "Rekisteröidy" ja täytä tarvittavat
+              tiedot. Vahvista sähköpostiosoitteesi ja aloita pelaaminen!
+            </p>
+          </details>
+
+          <details>
+            <summary>Onko MrPacho Casino lisensoitu?</summary>
+            <p>Kyllä, MrPacho Casino toimii Maltan pelilisenssillä, mikä takaa turvallisen ja reilun pelikokemuksen.</p>
+          </details>
+
+          <details>
+            <summary>Mitkä maksutavat ovat saatavilla?</summary>
+            <p>MrPacho Casino tukee useita maksutapoja, kuten Visa, Mastercard, PayPal, Skrill, Neteller ja pankkisiirto.</p>
+          </details>
+
+          <details>
+            <summary>Voinko pelata mobiililaitteella?</summary>
+            <p>
+              Kyllä, MrPacho Casino on optimoitu toimimaan sujuvasti myös älypuhelimilla ja tableteilla niin Android-
+              kuin iOS-laitteilla.
+            </p>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <div class="updated">
+      <div class="container"><strong>Päivitetty:</strong> <span id="updated-date"></span></div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container">
+        <h2 class="section-title">Luotetut kumppanit</h2>
+        <div class="trust-grid">
+          <div class="trust-item"><a href="https://www.gambleaware.org/" target="_blank" rel="noopener noreferrer"><img src="trust bages/gambleaware.png" alt="GambleAware" /></a></div>
+          <div class="trust-item"><a href="https://www.dmca.com/" target="_blank" rel="noopener noreferrer"><img src="trust bages/dmca.png" alt="DMCA" /></a></div>
+          <div class="trust-item"><a href="https://www.cga.cw/" target="_blank" rel="noopener noreferrer"><img src="trust bages/cga.jpeg" alt="CGA" /></a></div>
+        </div>
+
+        <nav class="footer-links" aria-label="Alatunnisteen linkit">
+          <a href="about-us/">Tietoa meistä</a>
+          <a href="contact-us/">Ota yhteyttä</a>
+          <a href="bonus-policy/">Bonuskäytäntö</a>
+          <a href="privacy-policy/">Tietosuojakäytäntö</a>
+          <a href="terms-and-conditions/">Käyttöehdot</a>
+          <a href="responsible-gambling/">Vastuullinen pelaaminen</a>
+        </nav>
+
+        <p class="copyright">2026 Copyright MrPacho Casino. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      const updatedDate = new Date();
+      document.getElementById("updated-date").textContent = updatedDate.toLocaleDateString("fi-FI", {
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric"
+      });
+    </script>
+  </body>
+</html>
