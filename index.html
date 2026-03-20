@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="fi">
   <head>
@@ -165,6 +166,7 @@
       }
 
       .game-card {
+        display: block;
         background: var(--card-bg);
         border-radius: 12px;
         overflow: hidden;
@@ -357,7 +359,7 @@
 
         <div class="header-actions">
           <a class="btn btn-login" href="login/">Kirjaudu sisään</a>
-          <a class="btn btn-register" href="#">Rekisteröidy</a>
+          <a class="btn btn-register" href="/go/">Rekisteröidy</a>
         </div>
       </div>
     </header>
@@ -377,7 +379,7 @@
             src="mrpacho images/mrpacho casino.webp"
             alt="MrPacho Casino banner"
           />
-          <a class="cta" href="#">Pelaa nyt!</a>
+          <a class="cta" href="/go/">Pelaa nyt!</a>
         </div>
       </section>
 
@@ -385,16 +387,16 @@
         <div class="container">
           <h2 class="section-title">Suositut pelit</h2>
           <div class="games-grid">
-            <article class="game-card"><img src="game images/aviatorlogo.png" alt="Aviator" /></article>
-            <article class="game-card"><img src="game images/poker arena.jpeg" alt="Poker Arena" /></article>
-            <article class="game-card"><img src="game images/blackjackpro.png" alt="Blackjack Pro" /></article>
-            <article class="game-card"><img src="game images/roulette live.avif" alt="Roulette Live" /></article>
-            <article class="game-card"><img src="game images/lightning dice.jpg" alt="Lightning Dice" /></article>
-            <article class="game-card"><img src="game images/crazytime.webp" alt="Crazy Time" /></article>
-            <article class="game-card"><img src="game images/jackpotcity.webp" alt="Jackpot City" /></article>
-            <article class="game-card"><img src="game images/megaslots.jpeg" alt="Mega Slots" /></article>
-            <article class="game-card"><img src="game images/baccaratvip.jpg" alt="Baccarat VIP" /></article>
-            <article class="game-card"><img src="game images/bookofgold.png" alt="Book of Gold" /></article>
+            <a class="game-card" href="/go/" aria-label="Aviator"><img src="game images/aviatorlogo.png" alt="Aviator" /></a>
+            <a class="game-card" href="/go/" aria-label="Poker Arena"><img src="game images/poker arena.jpeg" alt="Poker Arena" /></a>
+            <a class="game-card" href="/go/" aria-label="Blackjack Pro"><img src="game images/blackjackpro.png" alt="Blackjack Pro" /></a>
+            <a class="game-card" href="/go/" aria-label="Roulette Live"><img src="game images/roulette live.avif" alt="Roulette Live" /></a>
+            <a class="game-card" href="/go/" aria-label="Lightning Dice"><img src="game images/lightning dice.jpg" alt="Lightning Dice" /></a>
+            <a class="game-card" href="/go/" aria-label="Crazy Time"><img src="game images/crazytime.webp" alt="Crazy Time" /></a>
+            <a class="game-card" href="/go/" aria-label="Jackpot City"><img src="game images/jackpotcity.webp" alt="Jackpot City" /></a>
+            <a class="game-card" href="/go/" aria-label="Mega Slots"><img src="game images/megaslots.jpeg" alt="Mega Slots" /></a>
+            <a class="game-card" href="/go/" aria-label="Baccarat VIP"><img src="game images/baccaratvip.jpg" alt="Baccarat VIP" /></a>
+            <a class="game-card" href="/go/" aria-label="Book of Gold"><img src="game images/bookofgold.png" alt="Book of Gold" /></a>
           </div>
         </div>
       </section>
